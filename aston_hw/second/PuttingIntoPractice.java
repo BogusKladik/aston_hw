@@ -25,7 +25,7 @@ public class PuttingIntoPractice {
         transactions.stream()
                     .filter(t -> t.getYear() == 2011)
                     .sorted((t1, t2) -> Integer.compare(t1.getValue(), t2.getValue()))
-                    .forEach(t -> System.out.println(t.toString()));
+                    .forEach(System.out::println);
         System.out.println();
 
         // 2
@@ -33,7 +33,7 @@ public class PuttingIntoPractice {
         transactions.stream()
                     .map(t -> t.getTrader().getCity())
                     .distinct()
-                    .forEach(t -> System.out.println(t.toString()));
+                    .forEach(System.out::println);
         System.out.println();
 
         // 3
@@ -41,7 +41,7 @@ public class PuttingIntoPractice {
         transactions.stream()
                     .filter(t -> t.getTrader().getCity() == "Cambridge")
                     .sorted((t1, t2) -> t1.getTrader().getName().compareTo(t2.getTrader().getName()))
-                    .forEach(t -> System.out.println(t.toString()));
+                    .forEach(System.out::println);
         System.out.println();
 
         // 4
